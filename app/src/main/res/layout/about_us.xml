@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_this_is_Anik_i_developed_this_application_to_help_university_student_to_calculate_their_cgpa_hope_you_guys_enjoy_this_app"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"/>
+</LinearLayout>

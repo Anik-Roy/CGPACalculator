@@ -1,0 +1,216 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context="com.workstation.anik.cgpacalculatorubuntu.MainActivity">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/input_credit_and_gpa_per_subject"
+            android:textColor="#1B5E20"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cgpaOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="19dp"
+            android:text="@string/cgpa_0_00"
+            android:textSize="24sp"
+            android:textColor="#1B5E20" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="74dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/cgpaOutput"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/roundedbutton"
+            android:onClick="addButtonClicked"
+            android:padding="10dp"
+            android:text="@string/add" />
+
+        <LinearLayout
+            android:id="@+id/updateClearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/addButton"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_gravity="left"
+                android:text="**Click on the below items for update previous input and Long click for delete previous input!"
+                android:textColor="#F44336"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/saveSQlite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/updateClearlayout"
+            android:layout_marginEnd="4dp"
+            android:layout_alignParentEnd="true">
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/redroundedbutton"
+                android:onClick="clearButtonClicked"
+                android:text="@string/clear"
+                android:textSize="15sp"/>
+
+            <Button
+                android:layout_width="76dp"
+                android:layout_height="40dp"
+                android:text="SAVE\nRESULT"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:background="@drawable/roundedbutton"
+                android:onClick="saveButtonClicked"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <EditText
+                android:id="@+id/creditInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="49"
+                android:gravity="center"
+                android:hint="@string/credit"
+                android:inputType="numberDecimal"
+                android:background="#FFFFFF"
+                android:textColor="#1B5E20" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/gpaInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="49"
+                android:gravity="center"
+                android:hint="@string/gpa"
+                android:inputType="numberDecimal"
+                android:background="#FFFFFF"
+                android:textColor="#1B5E20"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/saveSQlite"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/serialName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="@string/serial"
+                    android:textColor="#1B5E20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/creditName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="@string/creditName"
+                    android:textColor="#1B5E20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/gpaName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="@string/gpaName"
+                    android:textColor="#1B5E20"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/totalgpaName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="@string/total_gpa"
+                    android:textColor="#1B5E20"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/showResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </LinearLayout>
+    </android.widget.RelativeLayout>
+
+    <ListView
+        android:id="@+id/navList"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|start"
+        android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>

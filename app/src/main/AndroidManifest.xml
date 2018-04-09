@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.workstation.anik.cgpacalculatorubuntu">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.workstation.anik.cgpacalculatorubuntu.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.workstation.anik.cgpacalculatorubuntu.AboutMe"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog">
+
+            <intent-filter>
+                <action android:name="android.intent.action.ABOUTME"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.workstation.anik.cgpacalculatorubuntu.Pref"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.PREF"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.workstation.anik.cgpacalculatorubuntu.SavedResult"
+            android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SAVEDRESULT"/>
+                <action android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

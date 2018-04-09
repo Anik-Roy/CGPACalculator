@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CgpaCalculator</string>
+    <string name="credit">credit</string>
+    <string name="gpa">gpa</string>
+    <string name="add">add</string>
+    <string name="cgpa_0_00">CGPA = 0.00</string>
+    <string name="input_credit_and_gpa_per_subject">Input Credit and GPA per Subject</string>
+    <string name="serial">Serial</string>
+    <string name="total_gpa">Total</string>
+    <string name="gpaName">GPA</string>
+    <string name="creditName">Credit</string>
+    <string name="clear">Clear</string>
+    <string name="hello_this_is_Anik_i_developed_this_application_to_help_university_student_to_calculate_their_cgpa_hope_you_guys_enjoy_this_app">Hello this is Anik. I developed this application to help university student to calculate their cgpa. Hope you guys enjoy this app.</string>
+</resources>
